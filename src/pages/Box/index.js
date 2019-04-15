@@ -53,9 +53,12 @@ export default class Box extends Component {
 
   render() {
     return (
+      
       <div id="box-container">
         <header>
-          <img src={logo} alt="" />
+          <a className="link-inicio" href="https://thyerry-omnistack-frontend.herokuapp.com" target="_self" rel="noopener noreferrer">
+            <img src={logo} alt="" />
+          </a>
           <h1>{this.state.box.title}</h1>
         </header>
 
@@ -71,7 +74,7 @@ export default class Box extends Component {
         <ul>
           {this.state.box.files && this.state.box.files.map(file => (
             <li key={file._id}>
-              <a className="fileInfo" href={file.url} target="_blank">
+              <a className="fileInfo" href={file.url} target="_blank" rel="noopener noreferrer">
                 <MdInsertDriveFile siz={24} color="#a5cfff" />
                 <strong>{file.title}</strong>
               </a>
